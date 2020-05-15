@@ -1,3 +1,11 @@
+/*----------------------------------
+ *
+ * Laboratorio: POO y C++
+ * Fecha: 15-May-2020
+ * Autor: A01706155 Manolo Ramírez Pintor
+ *
+ *----------------------------------*/
+ 
 #include <iostream>
 #include <math.h>
 
@@ -8,10 +16,10 @@ public:
 double lado_a,lado_b,lado_c,a_cuadrada,c_cuadrada,semifinal;
 
 void medidas() {
-cout << "Ingresa la longitud de ambos lados: ";
+cout << "Ingresa la longitud de ambos lados (a,b): ";
 cin >> lado_a;
 lado_b = lado_a;
-cout << "Ingresa la longitud de la base: ";
+cout << "Ingresa la longitud de la base (c): ";
 cin >> lado_c;
 cout <<"\n";
 }
