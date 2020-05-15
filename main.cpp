@@ -5,7 +5,7 @@
  * Autor: A01706155 Manolo Ramírez Pintor
  *
  *----------------------------------*/
- 
+
 #include <iostream>
 #include <math.h>
 
@@ -39,13 +39,14 @@ void area() {
 a_cuadrada=pow(lado_a,2);
 c_cuadrada=pow(lado_c,2);
 semifinal=a_cuadrada-(c_cuadrada/4);
-cout <<"El área del triángulo es de "<< sqrt(semifinal) <<" unidades cuadradas";
+cout <<"El área del triángulo es de "<< sqrt(semifinal) <<" unidades cuadradas\n";
 }
 
 };
 
 int main()
 {
+cout <<"¡Bienvenido a la calculadora de triángulos equiláteros! :D\n";
 triangulo test;
 test.medidas();
 test.verificador();
