@@ -1,57 +1,60 @@
 /*----------------------------------
- *
- * Laboratorio: POO y C++
- * Fecha: 15-May-2020
- * Autor: A01706155 Manolo Ramírez Pintor
- *
- *----------------------------------*/
-
+*
+* Laboratorio: POO y C++
+* Fecha: 15-May-2020
+* Autor: A01706155 Manolo Ramírez Pintor
+*
+*----------------------------------*/
 #include <iostream>
 #include <math.h>
 
 using namespace std;
 
 class triangulo {
-public:
-double lado_a,lado_b,lado_c,a_cuadrada,c_cuadrada,semifinal;
-
-void medidas() {
-cout << "Ingresa la longitud de ambos lados (a,b): ";
-cin >> lado_a;
-lado_b = lado_a;
-cout << "Ingresa la longitud de la base (c): ";
-cin >> lado_c;
-cout <<"\n";
-}
-
-void verificador() {
-if (lado_a > lado_c)
-cout <<"";
-else 
-cout << "¡¡Advertencia!!. El triángulo especificado no existe. \nEl cálculo dará errores. F.\n\n"; 
-}
-
-void perimetro() {
-cout <<"El perímetro del triángulo es de "<<lado_a+lado_b+lado_c<<" unidades \n";
-}
-
-void area() {
-a_cuadrada=pow(lado_a,2);
-c_cuadrada=pow(lado_c,2);
-semifinal=a_cuadrada-(c_cuadrada/4);
-cout <<"El área del triángulo es de "<< sqrt(semifinal) <<" unidades cuadradas\n";
-}
-
+private: //Atributos
+float lado_ayb, lado_c;
+public: //Métodos
+void setLados(float, float);
+float getPerimetro();
+float getArea();
 };
+
+//Setters, para atributos
+void triangulo::setLados(float ladoayb, float ladoc){
+  lado_ayb = ladoayb;
+  lado_c = ladoc;
+}
+
+float triangulo::getPerimetro(){
+  if (lado_ayb > lado_c){
+  }
+  else{
+  swap(lado_ayb,lado_c); 
+  }
+  float perimetro;
+  perimetro = (lado_ayb*2)+lado_c;
+  return perimetro;
+}
+
+float triangulo::getArea(){
+  float a_cuadrada=pow(lado_ayb,2);
+  float c_cuadrada=pow(lado_c,2);
+  float semifinal=a_cuadrada-(c_cuadrada/4);
+  float yafinal = sqrt(semifinal);
+  return yafinal;
+}
 
 int main()
 {
-cout <<"¡Bienvenido a la calculadora de triángulos equiláteros! :D\n";
-triangulo test;
-test.medidas();
-test.verificador();
-test.perimetro();
-test.area();
+cout <<"¡Bienvenido a la calculadora de triángulos isósceles! :D\n"<<endl;
+
+triangulo triangulo1;
+
+triangulo1.setLados(5,2);
+cout<<"El perimetro del triángulo es: "<<triangulo1.getPerimetro()<<endl;;
+cout<<"El área del triángulo es: "<<triangulo1.getArea()<<endl;
+
+
 return 0;
 
 }
